@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<base href="/">
+<!-- 1. Load libraries -->
+<!-- Polyfill(s) for older browsers -->
+
+<!-- This framework ensures that ES 6 javascript can run in old browsers. -->
+<script src="../../node_modules/core-js/client/shim.min.js"></script> 
+
+<!-- This framework ensures us to treat group of Async activities as one zone. -->
+<script src="../../node_modules/zone.js/dist/zone.js"></script>
+
+<!-- Helps us to apply meta-data on Javascript classes. We are currently using @NgModule and @NgComponent as attributes. -->
+<script src="../../node_modules/reflect-metadata/Reflect.js"></script>
+
+<!-- This module will helps to load JS files using module protocols like commonjs , AMD or UMD. -->
+<script src="../../node_modules/systemjs/dist/system.src.js"></script>
+<!-- 2. Configure SystemJS -->
+<script src="../systemjs.config.js"></script>
+<script>
+    System.config({
+        "defaultJSExtensions": true
+    });
+
+    System.import('startup').catch(function (err) { console.error(err); });
+</script>
+
+<body>
+    <customer-ui></customer-ui>
+</body>
+
+</html>
