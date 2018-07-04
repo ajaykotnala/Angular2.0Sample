@@ -8,17 +8,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
-var forms_1 = require("@angular/forms");
 var CustomerComponent_1 = require("../Component/CustomerComponent");
+var SupplierComponent_1 = require("../Component/SupplierComponent");
+var MasterPageComponent_1 = require("../Component/MasterPageComponent");
+var WelcomeComponent_1 = require("../Component/WelcomeComponent");
+var router_1 = require("@angular/router");
+var Routing_1 = require("../Routing/Routing");
+var forms_1 = require("@angular/forms");
 var MainModuleLibrary = /** @class */ (function () {
     function MainModuleLibrary() {
     }
     MainModuleLibrary = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule,
-                forms_1.FormsModule],
-            declarations: [CustomerComponent_1.CustomerComponent],
-            bootstrap: [CustomerComponent_1.CustomerComponent]
+            imports: [router_1.RouterModule.forRoot(Routing_1.ApplicationRoutes),
+                platform_browser_1.BrowserModule,
+                forms_1.FormsModule,
+                forms_1.ReactiveFormsModule],
+            declarations: [CustomerComponent_1.CustomerComponent, MasterPageComponent_1.MasterPageComponent, SupplierComponent_1.SupplierComponent, WelcomeComponent_1.WelcomeComponent],
+            bootstrap: [MasterPageComponent_1.MasterPageComponent]
         })
     ], MainModuleLibrary);
     return MainModuleLibrary;

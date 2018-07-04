@@ -1,0 +1,28 @@
+<table border="1">
+    <tr>
+        <td>
+            <img src="" alt="Image needed" />
+        </td>
+        <td>Header</td>
+    </tr>
+    <tr>
+        <td>Left Menu
+            <br />
+            <br />
+            <br />
+            <a [routerLink]="['Supplier']">Supplier</a>
+            <br />
+            <br />
+            <a [routerLink]="['Customer']">Customer</a>
+        </td>
+        <td>
+            <div id="dynamicscreen">
+                <router-outlet></router-outlet>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>Footer</td>
+        <td></td>
+    </tr>
+</table>

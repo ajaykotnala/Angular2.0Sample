@@ -6,19 +6,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var Customer_1 = require("../Model/Customer");
 var core_1 = require("@angular/core");
-var CustomerComponent = /** @class */ (function () {
-    function CustomerComponent() {
-        this.CurrentCustomer = new Customer_1.Customer();
+var WelcomeComponent = /** @class */ (function () {
+    function WelcomeComponent() {
     }
-    CustomerComponent = __decorate([
+    WelcomeComponent = __decorate([
         core_1.Component({
-            // selector: "main-ui",
-            templateUrl: "../UI/Customer.html"
+            templateUrl: "../UI/Welcome.html"
         })
-    ], CustomerComponent);
-    return CustomerComponent;
+    ], WelcomeComponent);
+    return WelcomeComponent;
 }());
-exports.CustomerComponent = CustomerComponent;
-//# sourceMappingURL=CustomerComponent.js.map
+exports.WelcomeComponent = WelcomeComponent;
+//# sourceMappingURL=WelcomeComponent.js.map
